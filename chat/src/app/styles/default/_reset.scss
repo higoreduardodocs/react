@@ -1,0 +1,48 @@
+/* VARIABLES*/
+@import './_vars.scss';
+
+/* BASE */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar { width: 1rem; }
+*::-webkit-scrollbar-track { background-color: $gray-00; }
+*::-webkit-scrollbar-thumb { background-color: $purple-700; }
+
+html,
+body {
+  font-family: $font-family;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+a { text-decoration: none; }
+
+select,
+button,
+input[type='submit'] {
+  border: none;
+  cursor: pointer;
+}
+
+iframe,
+textarea,
+input,
+select {
+  font-family: inherit;
+  resize: none;
+  border: none;
+  outline: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}

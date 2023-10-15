@@ -1,0 +1,20 @@
+@import './default/vars';
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $purple-200;
+  height: 100vh;
+
+  .container {
+    display: flex;
+    width: 65%;
+    height: 80%;
+    border-radius: $border-radius-lg;
+    border: $border;
+    border-color: $purple-200;
+    overflow: hidden;
+    box-shadow: $box-shadow;
+  }
+}
