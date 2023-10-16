@@ -49,6 +49,7 @@
 
 .search {
   border-bottom: $border;
+  background-color: $purple-700;
 
   .search-form {
     padding: 1rem 2rem;
@@ -60,6 +61,31 @@
       &::placeholder {
         color: $gray-200;
       }
+    }
+  }
+
+  .user-chats {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    cursor: pointer;
+    padding: 1rem 2rem;
+
+    &:hover {
+      background-color: $purple-500;
+    }
+
+    img {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+    }
+
+    span {
+      font-size: $font-size-sm;
+      line-height: $line-height-sm;
+      color: $gray-100;
+      font-weight: $font-weight-semi-bold;
     }
   }
 }
@@ -77,7 +103,8 @@
     }
 
     img {
-      width: 5rem;
+      width: 100%;
+      max-width: 5rem;
       height: 5rem;
       border-radius: 50%;
     }
