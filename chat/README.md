@@ -10,5 +10,5 @@ Currently, two official plugins are available:
 Database:
 
 users { uid, displayName, email, photoURL }
-userChats { janesId: { combineId: { userInfo: { uid, username, image }, lastMessage, date } } }
-chats { messages[{ uid, text, senderUid, date }], combineId } 
+chats { combineUid: { messages[{ uid, senderUid, text, image, date }] } } 
+userChats { combineId: { userInfo: { uid, username, image }, lastMessage, date } }

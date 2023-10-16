@@ -1,18 +1,31 @@
-export default function Message() {
+/* eslint-disable react/prop-types */
+import { useEffect, useRef } from 'react'
+import useChat from '../../hooks/use-chat'
+import useUser from '../../hooks/use-user'
+
+export default function Message({ message }) {
+  const { user } = useUser()
+  const { state: userChat } = useChat()
+
+  const ref = useRef()
+
+  useEffect(() => {
+    ref.current?.scrollIntoView({ behavior: 'smooth' })
+  }, [message])
+
   return (
-    <div className="message">
+    <div ref={ref} className={`message ${message?.senderUid === user.uid && 'owner'}`}>
       <div className="message-info">
-        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" />
+        <img
+          src={
+            message?.senderUid === user.uid ? user.photoURL : userChat.user.photoURL
+          }
+        />
         <span>agora</span>
       </div>
       <div className="message-content">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
-          facere, repellat totam magni dolor ullam beatae qui tempora
-          dignissimos odit nihil vitae facilis repudiandae fugit. Dolore
-          suscipit ratione reprehenderit fugit!
-        </p>
-        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" />
+        <p>{message?.text}</p>
+        {message?.image && <img src={message.image} />}
       </div>
     </div>
   )
