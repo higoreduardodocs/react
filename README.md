@@ -7,10 +7,10 @@
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/bhigoreduardo">
-        <img src="https://avatars.githubusercontent.com/u/96431991?v=4" width="100px;" alt="Foto do Higor Eduardo no GitHub"/><br>
+      <a href="https://github.com/higoreduardodocs">
+        <img src="https://avatars.githubusercontent.com/u/143645475?v=4" width="100px;" alt="Foto do Higor Eduardo Docs no GitHub"/><br>
         <sub>
-          <b>Higor Eduardo</b>
+          <b>Higor Eduardo Docs</b>
         </sub>
       </a>
     </td>
