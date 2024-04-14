@@ -1,39 +1,36 @@
-# :desktop_computer: Realtime Chat Application
+Application developed in React and Firebase
 
-<img src="./assets/cover.png" alt="Cover projeto" />
+> :fire: Development
 
-## :briefcase: Stacks
+```
+cd web && yarn && yarn dev
 
-- React (Vite/JavaScript)
-- NoSQL (Firebase)
+```
 
-## :hammer: Tools
+> :gear: Environment Variables
 
-- Git
-- NodeJs
-- Yarn
-- VS Code
+- Firebase API Key: VITE_FIREBASE_APIKEY `web`
+- Firebase Auth Domain: VITE_FIREBASE_AUTHDOMAIN `web`
+- Firebase Project ID: VITE_FIREBASE_PROJECTID `web`
+- Firebase Storage Bucket: VITE_FIREBASE_STORAGEBUCKET `web`
+- Firebase Messaging Sender ID: VITE_FIREBASE_MESSAGINGSENDERID `web`
+- Firebase APP ID: VITE_FIREBASE_APPID `web`
 
-## :fire: Run
+> :thought_balloon: `Lama Dev`
 
-- Development (Port 5173): `yarn dev`
-- Build: `yarn build`
+![Cover](./assets/cover.png)
 
-## :triangular_flag_on_post: Environment Variables
+> :dart: Documentation
 
-- Firebase API Key: `VITE_FIREBASE_APIKEY`
-- Firebase Auth Domain: `VITE_FIREBASE_AUTHDOMAIN`
-- Firebase Project ID: `VITE_FIREBASE_PROJECTID`
-- Firebase Storage Bucket: `VITE_FIREBASE_STORAGEBUCKET`
-- Firebase Messaging Sender ID: `VITE_FIREBASE_MESSAGINGSENDERID`
-- Firebase APP ID: `VITE_FIREBASE_APPID`
+<details>
+<summary>:scroll: Roles</summary>
 
-## :page_facing_up: Docs
-
-### Collections:
+#### Collections:
 
 - users { uid, displayName, email, photoURL }
 - chats { combineUid: { messages[{ uid, senderUid, text, image, date }] } }
 - userChats { uid: { combineId: { userInfo: { uid, username, image }, lastMessage, date } } }
 
-<p align="center"><img src="./assets/collections.png" alt="Collections do projeto" /><p>
+![Collections](./assets/collections.png)
+
+</details>
