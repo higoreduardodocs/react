@@ -1,9 +1,17 @@
-# :desktop_computer: React Application
+Application developed in React
 
-Applications developed in React and other auxiliary technologies
+> :fire: Development
 
-> Chat App:
+```
+  cd web && yarn && yarn dev
+```
 
-- First release: [chat-app/first-release](https://github.com/higoreduardodocs/nest/tree/server-app/todo-list)
+> :gear: Environment Variables
 
-> :copyright: [Higor Eduardo Docs](https://github.com/higoreduardodocs)
+- Server URL: NEXT_SERVER_URL `web`
+- Server Address: VITE_SERVER_URL `web`
+- API Key: VITE_SERVER_KEY `web`
+
+> :thought_balloon: `Mononymperson`
+
+![Cover](./assets/cover.png)
