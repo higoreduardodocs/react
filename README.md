@@ -1,18 +1,9 @@
 # :desktop_computer: React Application
 
-- Realtime Chat LamaDev: `realtime-chat/branch`
+Applications developed in React and other auxiliary technologies
 
-## :unicorn: Author
+> Chat App:
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/higoreduardodocs">
-        <img src="https://avatars.githubusercontent.com/u/143645475?v=4" width="100px;" alt="Foto do Higor Eduardo Docs no GitHub"/><br>
-        <sub>
-          <b>Higor Eduardo Docs</b>
-        </sub>
-      </a>
-    </td>
-  </tr>
-</table>
+- Todo list: [chat-app/first-release](https://github.com/higoreduardodocs/nest/tree/server-app/todo-list)
+
+> :copyright: [Higor Eduardo Docs](https://github.com/higoreduardodocs)
