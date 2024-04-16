@@ -1,7 +1,10 @@
 import { useState } from 'react'
+
 import api from '../../libs/api'
+import useUser from '../../hooks/use-user'
 
 export default function Form() {
+  const { setId, setUsername } = useUser()
   const [user, setUser] = useState({
     username: '',
     password: '',
@@ -19,7 +22,8 @@ export default function Form() {
     const endpoint = isNonLogin ? '/users/sign-up' : '/users/sign-in'
     try {
       const { data } = await api.post(endpoint, user)
-      console.log(data)
+      setId(data.id)
+      setUsername(user.username)
     } catch (error) {
       alert(error.response.data)
     }
