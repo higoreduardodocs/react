@@ -1,3 +1,10 @@
+import UserContextProvider from '../contexts/user-context'
+import Routes from './routes'
+
 export default function App() {
-  return <main>App</main>
+  return (
+    <UserContextProvider>
+      <Routes />
+    </UserContextProvider>
+  )
 }
