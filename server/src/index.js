@@ -3,10 +3,13 @@ const express = require('express')
 const cookieParser = require('cookie-parser')
 const cors = require('cors')
 const ws = require('ws')
+const mongoose = require('mongoose')
 
 /* CONST */
 const serverPort = process.env.SERVER_PORT || 3001
 const clientUrl = process.env.CLIENT_URL
+const mongoUrl = process.env.MONGO_URL
+const mongoOptions = { useNewUrlParser: true, useUnifiedTopology: true }
 
 const app = express()
 
@@ -37,6 +40,11 @@ app.use((req, res, next) => {
 app.get('/', (req, res) => res.send({ message: 'ok' }))
 
 /* LISTEN */
+mongoose
+  .connect(mongoUrl, mongoOptions)
+  .then(() => console.log(`✅ conneted to mongo`))
+  .catch((err) => console.log(`${err} ❌ did not connect`))
+
 const server = app.listen(serverPort, () => {
   console.log(`🚀 running on: http://localhost:${serverPort}`)
 })
