@@ -5,6 +5,8 @@ const cors = require('cors')
 const ws = require('ws')
 const mongoose = require('mongoose')
 
+const userRoutes = require('./routes/user-route')
+
 /* CONST */
 const serverPort = process.env.SERVER_PORT || 3001
 const clientUrl = process.env.CLIENT_URL
@@ -37,7 +39,8 @@ app.use((req, res, next) => {
   next()
 })
 
-app.get('/', (req, res) => res.send({ message: 'ok' }))
+/* ROUTES */
+app.use('/api/v1/users', userRoutes)
 
 /* LISTEN */
 mongoose

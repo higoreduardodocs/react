@@ -1,0 +1,37 @@
+@server=http://localhost:3001/api/v1
+
+@users=users
+@userId=661e8a56e2a3d269e7ae8fdf
+@friendUserId=661e8d98590b5b91483a0d47
+
+### POST /sign-up
+POST {{ server }}/{{ users }}/sign-up HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "user",
+  "password": "pass"
+}
+
+### POST /sign-in
+POST {{ server }}/{{ users }}/sign-in HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "user",
+  "password": "pass"
+}
+
+### GET /profile
+GET {{ server }}/{{ users }}/profile HTTP/1.1
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjFlOGE1NmUyYTNkMjY5ZTdhZThmZGYiLCJ1c2VybmFtZSI6InVzZXIiLCJpYXQiOjE3MTMyNzc3MzB9.CC1IlpZpV2boLmBwVTuMk8mG9D5aLHNXfu5sKy5FzT8
+
+### GET /logout
+GET {{ server }}/{{ users }}/logout HTTP/1.1
+
+### GET /people
+GET {{ server }}/{{ users }}/people HTTP/1.1
+
+### GET /:id/messages
+GET {{ server }}/{{ users }}/{{ friendUserId }}/messages HTTP/1.1
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjFlOGE1NmUyYTNkMjY5ZTdhZThmZGYiLCJ1c2VybmFtZSI6InVzZXIiLCJpYXQiOjE3MTMyNzc3MzB9.CC1IlpZpV2boLmBwVTuMk8mG9D5aLHNXfu5sKy5FzT8
