@@ -90,7 +90,7 @@ exports.people = async (req, res) => {
 }
 
 exports.messages = async (req, res) => {
-  const { userId } = req.params
+  const { id: userId } = req.params
   const userData = await getUserDataFromRequest(req)
   const ourUserId = userData.userId
 

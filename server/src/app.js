@@ -39,6 +39,7 @@ app.use((req, res, next) => {
 })
 
 /* ROUTES */
+app.use('/uploads', express.static(__dirname + '/uploads'))
 app.use('/api/v1/users', userRoutes)
 
 module.exports = app

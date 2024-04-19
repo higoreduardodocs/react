@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken')
 const fs = require('fs')
+const { join } = require('path')
 
 const MessageModel = require('../models/message-model')
 
@@ -58,7 +59,7 @@ exports.createMessage = async (wss, ws, req, message) => {
     const parts = file.name.split('.')
     const ext = parts[parts.length - 1]
     filename = Date.now() + '.' + ext
-    const path = __dirname + '../uploads/' + filename
+    const path = join(__dirname, '../uploads/' + filename)
     const bufferData = new Buffer(file.data.split(',')[1], 'base64')
 
     fs.writeFile(path, bufferData, () => {
@@ -74,8 +75,8 @@ exports.createMessage = async (wss, ws, req, message) => {
       file: filename,
     })
 
-    new Array()
-      .fill(...wss.clients)
+    const clients = [...wss.clients]
+    clients
       .filter((item) => item.userId === recipient)
       .forEach((item) =>
         item.send(
