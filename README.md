@@ -1,13 +1,24 @@
-# :desktop_computer: React Application
+Application developed in React, Express and Mongo
 
 Applications developed in React and other auxiliary technologies
 
-> Chat App:
+> :fire: Development
 
-- First release: [chat-app/first-release](https://github.com/higoreduardodocs/react/tree/chat-app/first-release)
+```
+  cd web && yarn && yarn dev
+  cd server && yarn && yarn dev
+```
 
-> Client App:
+> :gear: Environment Variables
 
-- Movielia: [client-app/movielia](https://github.com/higoreduardodocs/react/tree/client-app/movielia)
+- Server URL: VITE_SERVER_URL `web`
+- Server socket URL: VITE_WEBSOCKET_URL `web`
+- Client URL: CLIENT_URL `server`
+- Server port: SERVER_PORT `server`
+- Mongo URL: MONGO_URL `server`
+- Secret salt: BCRYPT_SALT `server`
+- JWT secret: JWT_SECRET `server`
 
-> :copyright: [Higor Eduardo Docs](https://github.com/higoreduardodocs)
+> :thought_balloon: `Dawind`
+
+![Cover](./assets/cover.png)
