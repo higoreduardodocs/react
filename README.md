@@ -10,4 +10,8 @@ Applications developed in React and other auxiliary technologies
 
 - Movielia: [client-app/movielia](https://github.com/higoreduardodocs/react/tree/client-app/movielia)
 
+> Clone App:
+
+- Social App: [clone-app/social-app](https://github.com/higoreduardodocs/react/tree/clone-app/social-app)
+
 > :copyright: [Higor Eduardo Docs](https://github.com/higoreduardodocs)
