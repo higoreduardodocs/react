@@ -1,13 +1,72 @@
-# :desktop_computer: React Application
+Application developed in React, Express and Mongo
 
-Applications developed in React and other auxiliary technologies
+> :fire: Development
 
-> Chat App:
+```
+  docker compose up -d && docker inspect mongo | grep IPAddress
+  cd web && yarn && yarn dev
+  cd server && yarn && yarn dev
+```
 
-- First release: [chat-app/first-release](https://github.com/higoreduardodocs/react/tree/chat-app/first-release)
+> :gear: Environment Variables
 
-> Client App:
+- Server URL: VITE_APP_SERVER_URL `web`
+- Server secret: SERVER_SECRET `server`
+- Server port: SERVER_PORT `server`
+- Database URL: MONGO_URL `server`
 
-- Movielia: [client-app/movielia](https://github.com/higoreduardodocs/react/tree/client-app/movielia)
+> :thought_balloon: `Ed roh`
 
-> :copyright: [Higor Eduardo Docs](https://github.com/higoreduardodocs)
+![Cover](./assets/cover.png)
+
+> :dart: Documentation
+
+<details>
+<summary>:scroll: Roles</summary>
+
+#### Coleções
+
+- **Entidades:**
+  - *Relacionamentos (Coleções):*
+      User [1..n]
+          Post
+            Image [1..1]
+          Friend
+          Image [1..1]
+
+  - *Propriedades:*
+    - **User:**
+      firstName
+      lastName
+      friends
+      email
+      password
+      picturePath
+      location
+      viewedProfile
+      impressions
+
+    - **Post:**
+      userId
+      firtName
+      lastName
+      location
+      description
+      userPicturePath
+      picturePath
+      likes
+      comments
+
+    - **Friends:**
+      firstName
+      lastName
+      picturePath
+      occupation
+      location
+
+    - **Images:**
+      path
+
+![Models](./assets/models.png)
+
+</details>
