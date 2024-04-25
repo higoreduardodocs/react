@@ -1,0 +1,33 @@
+@server = http://localhost:3001
+@endPoint = users
+
+### POST /
+POST {{ server }}/{{ endPoint }} HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Fake name",
+  "email": "newfakeemail@email.com",
+  "password": "fakepass"
+}
+
+### POST /auth
+POST {{ server }}/{{ endPoint }}/auth HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "newfakeemail@email.com",
+  "password": "fakepass"
+}
+
+
+### PUT /
+PUT {{ server }}/{{ endPoint }} HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5ld2Zha2VlbWFpbEBlbWFpbC5jb20iLCJpYXQiOjE2ODY1MzQxMDksImV4cCI6MTY4NjUzNTAwOSwic3ViIjoiMDYwMTVhMTctNjY2OC00MDRlLWI3YTktM2VmMTU5YTRiZTc0In0.AxCy9Lbt3m09lNhkE4oNikm2pAQAt9oQR77cXpczTTo
+
+{
+  "name": "New fake name",
+  "password": "fakepass",
+  "newPassword": "fakepass"
+}
