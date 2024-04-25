@@ -5,6 +5,7 @@ Applications developed in React and other auxiliary technologies
 > Chat App:
 
 - First release: [chat-app/first-release](https://github.com/higoreduardodocs/react/tree/chat-app/first-release)
+- Second release: [chat-app/second-release](https://github.com/higoreduardodocs/react/tree/chat-app/second-release)
 
 > Client App:
 
