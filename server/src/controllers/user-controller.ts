@@ -19,6 +19,17 @@ class UserController {
       next(error)
     }
   }
+
+  async auth(req: Request, res: Response, next: NextFunction) {
+    const { email, password } = req.body
+
+    try {
+      const user = await this.userService.auth(email, password)
+      return res.status(200).json(user)
+    } catch (error) {
+      next(error)
+    }
+  }
 }
 
 export { UserController }
