@@ -1,0 +1,63 @@
+@server = http://localhost:3001
+
+@auth=auth
+@posts=posts
+@users=users
+@userId=6629ae631693e89b8ab94783
+@postId=6629b20c21df966319ab6d39
+@friendId=6629b20c21df966319ab6d31
+
+### POST /auth/sign-up
+POST {{ server }}/{{ auth }}/sign-up HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "First",
+    "lastName": "Last",
+    "email": "first@email.com",
+    "password": "fakepass"
+}
+
+### POST /auth/sign-in
+POST {{ server }}/{{ auth }}/sign-in HTTP/1.1
+content-type: application/json
+
+{
+    "email": "first@email.com",
+    "password": "fakepass"
+}
+
+### POST /posts
+POST {{ server }}/{{ posts }} HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MjlhZTYzMTY5M2U4OWI4YWI5NDc4MyIsImlhdCI6MTcxNDAwODg5M30.5osYbqkJAQdQWusnHoPaxId1C_VtIrPqaq2jI8ZXKrM
+
+{
+  "userId": "6629ae631693e89b8ab94783",
+  "firstName": "First",
+  "lastName": "Last"
+}
+
+### GET /posts
+GET {{ server }}/{{ posts }} HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MjlhZTYzMTY5M2U4OWI4YWI5NDc4MyIsImlhdCI6MTcxNDAwODg5M30.5osYbqkJAQdQWusnHoPaxId1C_VtIrPqaq2jI8ZXKrM
+
+### GET /posts/:userId
+GET {{ server }}/{{ posts }}/{{ userId }} HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MjlhZTYzMTY5M2U4OWI4YWI5NDc4MyIsImlhdCI6MTcxNDAwODg5M30.5osYbqkJAQdQWusnHoPaxId1C_VtIrPqaq2jI8ZXKrM
+
+### PATCH /posts/:id/like
+PATCH {{ server }}/{{ posts }}/{{ postId }}/like HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MjlhZTYzMTY5M2U4OWI4YWI5NDc4MyIsImlhdCI6MTcxNDAwODg5M30.5osYbqkJAQdQWusnHoPaxId1C_VtIrPqaq2jI8ZXKrM
+
+### GET /users/:id
+GET {{ server }}/{{ users }}/{{ userId }} HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MjlhZTYzMTY5M2U4OWI4YWI5NDc4MyIsImlhdCI6MTcxNDAwODg5M30.5osYbqkJAQdQWusnHoPaxId1C_VtIrPqaq2jI8ZXKrM
+
+### GET /users/:id/friends
+GET {{ server }}/{{ users }}/{{ userId }}/friends HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MjlhZTYzMTY5M2U4OWI4YWI5NDc4MyIsImlhdCI6MTcxNDAwODg5M30.5osYbqkJAQdQWusnHoPaxId1C_VtIrPqaq2jI8ZXKrM
+
+### PATCH /users/:id/:friendId
+PATCH {{ server }}/{{ users }}/{{ userId }}/{{ friendId }} HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MjlhZTYzMTY5M2U4OWI4YWI5NDc4MyIsImlhdCI6MTcxNDAwODg5M30.5osYbqkJAQdQWusnHoPaxId1C_VtIrPqaq2jI8ZXKrM
