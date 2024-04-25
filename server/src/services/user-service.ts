@@ -1,7 +1,7 @@
 import { compare, hash } from 'bcrypt'
 import { sign } from 'jsonwebtoken'
 
-import { ISave } from '../interfaces/user-interface'
+import { ISave, IUpdate } from '../interfaces/user-interface'
 import { UserRepository } from '../repositories/user-repository'
 
 class UserService {
@@ -49,6 +49,23 @@ class UserService {
         email: findUser.email,
       },
     }
+  }
+
+  async update({ user_id, name, password, newPassword, avatarUrl }: IUpdate) {
+    const findUser = await this.userRepository.findById(user_id)
+    if (!findUser) throw new Error('User not register')
+
+    const passwordMatch = await compare(password, findUser.password)
+    if (!passwordMatch) throw new Error('Invalid credentials')
+
+    const hashedPassword = await hash(newPassword, 10)
+    const user = await this.userRepository.update(
+      user_id,
+      name,
+      hashedPassword,
+      'avatarUrl'
+    )
+    return user
   }
 }
 
