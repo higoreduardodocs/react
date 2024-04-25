@@ -1,4 +1,5 @@
 import { NextFunction, Request, Response } from 'express'
+import { sign, verify } from 'jsonwebtoken'
 
 import { UserService } from '../services/user-service'
 
@@ -46,6 +47,27 @@ class UserController {
         avatarUrl: req.file,
       })
       return res.status(200).json(user)
+    } catch (error) {
+      next(error)
+    }
+  }
+
+  async refreshToken(req: Request, res: Response, next: NextFunction) {
+    const { refreshToken } = req.body
+
+    try {
+      if (!refreshToken) throw new Error('No refresh token provided')
+      if (!process.env.ACCESS_KEY_TOKEN) throw new Error('No secret provided')
+
+      const { sub } = verify(refreshToken, process.env.ACCESS_KEY_TOKEN)
+      const token = sign({ sub }, process.env.ACCESS_KEY_TOKEN, {
+        expiresIn: 60 * 15,
+      })
+      const newRefreshToken = sign({ sub }, process.env.ACCESS_KEY_TOKEN, {
+        expiresIn: '7d',
+      })
+
+      return res.status(200).json({ token, refreshToken: newRefreshToken })
     } catch (error) {
       next(error)
     }
