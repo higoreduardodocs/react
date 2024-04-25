@@ -1,0 +1,27 @@
+@server = http://localhost:3001
+@endPoint = schedules
+@scheduleId = d8ad19c6-b288-49fa-ada8-a2141082b09a
+
+### POST /
+POST {{ server }}/{{ endPoint }} HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsQGVtYWlsLmNvbSIsImlhdCI6MTcxNDA3NTU1NSwiZXhwIjoxNzE0MDc2NDU1LCJzdWIiOiJlMjBmZDY4ZC0yODMyLTRhNWYtYmY1ZC1lNzA1N2RiZTU1ODYifQ.4ahxaenmwd83fFMQIJiulvtx95VU1sb7dHMgxte38DQ
+
+{
+  "name": "Name",
+  "phone": "123456879",
+  "date": "2024-06-20T18:39:05.409Z"
+}
+
+### GET /
+GET {{ server }}/{{ endPoint }}?date=2024-06-20 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsQGVtYWlsLmNvbSIsImlhdCI6MTcxNDA3NTU1NSwiZXhwIjoxNzE0MDc2NDU1LCJzdWIiOiJlMjBmZDY4ZC0yODMyLTRhNWYtYmY1ZC1lNzA1N2RiZTU1ODYifQ.4ahxaenmwd83fFMQIJiulvtx95VU1sb7dHMgxte38DQ
+
+### PUT /:id
+PUT {{ server }}/{{ endPoint }}/{{ scheduleId }} HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsQGVtYWlsLmNvbSIsImlhdCI6MTcxNDA3NTU1NSwiZXhwIjoxNzE0MDc2NDU1LCJzdWIiOiJlMjBmZDY4ZC0yODMyLTRhNWYtYmY1ZC1lNzA1N2RiZTU1ODYifQ.4ahxaenmwd83fFMQIJiulvtx95VU1sb7dHMgxte38DQ
+
+{
+  "date": "2024-06-18T21:39:05.409Z"
+}
