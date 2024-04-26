@@ -10,6 +10,7 @@ import Register from './pages/register'
 import Gigs from './pages/gigs'
 import GigsAdd from './pages/gigs-add'
 import GigId from './pages/gig-id'
+import GigsPortfolio from './pages/gigs-portfolio'
 
 const Layout = () => {
   const queryClient = new QueryClient()
@@ -56,6 +57,10 @@ export default function App() {
         {
           path: '/gigs/:id',
           element: <GigId />,
+        },
+        {
+          path: '/my-gigs',
+          element: <GigsPortfolio />,
         },
       ],
     },
