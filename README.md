@@ -19,6 +19,10 @@ Applications developed in React and other auxiliary technologies
 
 - First release: [ecommerce-app/first-release](https://github.com/higoreduardodocs/react/tree/ecommerce-app/first-release)
 
+> Food App:
+
+- First release: [food-app/first-release](https://github.com/higoreduardodocs/react/tree/food-app/first-release)
+
 > Full Stack:
 
 - Code hero: [full-stack/code-hero](https://github.com/higoreduardodocs/react/tree/full-stack/code-hero)
