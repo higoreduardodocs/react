@@ -1,0 +1,151 @@
+@import 'src/config/styles/mixins.scss';
+
+.single-product {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+  max-width: 1200px;
+  padding: 50px 20px;
+  margin: 0 auto;
+
+  @include md {
+    flex-direction: row;
+  }
+
+  &:hover {
+    .single-product--image img {
+      transform: scale(1);
+    }
+  }
+
+  .single-product--image {
+    background-color: rgba(0, 0, 0, 0.05);
+    width: 100%;
+    height: fit-content;
+
+    @include md {
+      width: 50%;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .single-product--description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    cursor: auto;
+
+    @include md {
+      width: 50%;
+    }
+
+    .single-product--description-title {
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    .single-product--description-price {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    .single-product--description-description {
+      font-size: 14px;
+      line-height: 20px;
+      color: #6b6b6b;
+    }
+
+    .single-product--description-button-group {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      width: 100%;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+      .single-product--description-button-group--quantity {
+        display: flex;
+        width: fit-content;
+        height: 50px;
+        border: 2px solid rgba(0, 0, 0, 0.2);
+
+        button,
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          font-size: 18px;
+          color: #6b6b6b;
+          border: none;
+          outline: none;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+
+        button:first-of-type {
+          border-right: 2px solid rgba(0, 0, 0, 0.2);
+        }
+
+        button:last-of-type {
+          border-left: 2px solid rgba(0, 0, 0, 0.2);
+        }
+
+        span {
+          width: 60px;
+        }
+      }
+
+      .single-product--description-button-group--cart {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 180px;
+        height: 50px;
+        font-size: 16px;
+        color: #fff;
+        background: #8e2de2;
+        outline: 0;
+        border: 0;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .single-product--description-info {
+      font-size: 14px;
+      font-weight: normal;
+
+      .single-product--description-info--property {
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .single-product--description-info--icons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .icon {
+          font-size: 16px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
