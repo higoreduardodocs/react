@@ -15,6 +15,7 @@ import Payment from './pages/payment'
 import Success from './pages/success'
 import GigsOrder from './pages/gigs-order'
 import Messages from './pages/messages'
+import MessagesId from './pages/messages-id'
 
 const Layout = () => {
   const queryClient = new QueryClient()
@@ -81,6 +82,10 @@ export default function App() {
         {
           path: '/messages',
           element: <Messages />,
+        },
+        {
+          path: '/messages/:id',
+          element: <MessagesId />,
         },
       ],
     },
