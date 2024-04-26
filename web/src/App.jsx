@@ -7,6 +7,7 @@ import Footer from './components/footer'
 import Home from './pages/home'
 import Login from './pages/login'
 import Register from './pages/register'
+import Gigs from './pages/gigs'
 
 const Layout = () => {
   const queryClient = new QueryClient()
@@ -41,6 +42,10 @@ export default function App() {
         {
           path: '/register',
           element: <Register />,
+        },
+        {
+          path: '/gigs',
+          element: <Gigs />,
         },
       ],
     },
