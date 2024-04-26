@@ -1,22 +1,30 @@
-# :desktop_computer: React Application
+Application developed in React and Strapi
 
-Applications developed in React and other auxiliary technologies
+> :fire: Development
 
-> Chat App:
+```
+  cd server && yarn && yarn develop
+  cd web && yarn && yarn dev
+```
 
-- First release: [chat-app/first-release](https://github.com/higoreduardodocs/react/tree/chat-app/first-release)
-- Second release: [chat-app/second-release](https://github.com/higoreduardodocs/react/tree/chat-app/second-release)
+> :gear: Environment Variables
 
-> Client App:
+- Sever URL: VITE_STRAPI_API_URL `web`
+- Sever token: VITE_STRAPI_API_TOKEN `web`
+- Strapi public key: VITE_STRIPE_PUBLIC_KEY `web`
+- Strapi secret key: STRIPE_PRIVATE_KEY `server`
+- Web URL: CLIENT_URL `server`
+- Host: HOST `server`
+- Port: PORT `server`
+- Keys: APP_KEYS `server`
+- Salt: API_TOKEN_SALT `server`
+- Secret: ADMIN_JWT_SECRET `server`
+- Token salt: TRANSFER_TOKEN_SALT `server`
+- Database: DATABASE_CLIENT `server`
+- Database filename: DATABASE_FILENAME `server`
+- Database secret: JWT_SECRET `server`
 
-- Movielia: [client-app/movielia](https://github.com/higoreduardodocs/react/tree/client-app/movielia)
+> :thought_balloon: `JS Dev Hindi`
 
-> Clone App:
-
-- Social App: [clone-app/social-app](https://github.com/higoreduardodocs/react/tree/clone-app/social-app)
-
-> Full Stack:
-
-- Code hero: [full-stack/code-hero](https://github.com/higoreduardodocs/react/tree/full-stack/code-hero)
-
-> :copyright: [Higor Eduardo Docs](https://github.com/higoreduardodocs)
+![Cover](./assets/cover.png)
+![Cover](./assets/cover.gif)
