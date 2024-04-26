@@ -1,0 +1,132 @@
+@import 'src/config/styles/mixins.scss';
+
+.header {
+  position: relative;
+  width: 100%;
+  background-color: #212121;
+  color: #fff;
+  border-bottom: 1px solid;
+  border-color: rgba(0, 0, 0, 0.1);
+  z-index: 10;
+
+  @keyframes fixedAnimate {
+    0% {
+      transform: translateY(-60px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    animation: fixedAnimate 300ms ease forwards;
+  }
+
+  .header--content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    .header--content-navbar {
+      display: none;
+
+      @include md {
+        display: block;
+      }
+
+      ul {
+        list-style-type: none;
+        display: flex;
+        gap: 25px;
+
+        li {
+          font-size: 14px;
+          font-weight: 600;
+          text-transform: uppercase;
+          cursor: pointer;
+
+          a {
+            color: #fff;
+            text-decoration: none;
+          }
+
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+
+    .header--content-logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+
+      @include md {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &:hover {
+        transform: translateX(-50%) scale(1.1);
+      }
+    }
+
+    .header--content-icons {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      svg {
+        font-size: 20px;
+        cursor: pointer;
+
+        &:hover,
+        &:hover ~ small {
+          transform: scale(1.1);
+        }
+      }
+
+      .header--content-icons-menu {
+        @include md {
+          display: none;
+        }
+
+        svg {
+          font-size: 20px;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+
+      .header--content-icons-cart {
+        position: relative;
+
+        small {
+          position: absolute;
+          top: -5px;
+          right: -12px;
+          font-size: 12px;
+          line-height: 1;
+          text-align: center;
+          padding: 2.5px;
+          min-width: 20px;
+          border-radius: 10px;
+          background: #8e2de2;
+        }
+      }
+    }
+  }
+}
