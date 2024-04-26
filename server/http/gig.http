@@ -1,0 +1,55 @@
+@server=http://localhost:3001
+@endPoint=gigs
+@userId=662b22349347f1f8d36879e5
+@gigId=662b2743e2e2c684e10ec171
+
+### POST /
+POST {{ server }}/{{ endPoint }}/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "category": "Fake Category",
+  "title": "Fake Title",
+  "shortTitle": "Content here, content here', making it look like readable English. Many desktop publishing",
+  "description": "Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident",
+  "shortDescription": "Various versions have evolved over the years, sometimes by accident",
+  "cover": "https://lh3.googleusercontent.com/a/AAcHTtcRLD0NaIOz4aNsYR811qJxXWMFExFwo3_zqL3cDg=s360-c-no",
+  "images": [
+    "https://lh3.googleusercontent.com/a/AAcHTtcRLD0NaIOz4aNsYR811qJxXWMFExFwo3_zqL3cDg=s360-c-no",
+    "https://lh3.googleusercontent.com/a/AAcHTtcRLD0NaIOz4aNsYR811qJxXWMFExFwo3_zqL3cDg=s360-c-no"
+  ],
+  "price": 100,
+  "deliveryTime": 3,
+  "revisionNumber": 2,
+  "features": [
+    "Fake Featured",
+    "Fake again Featured"
+  ]
+}
+
+### GET /:id
+GET {{ server }}/{{ endPoint }}/{{ gigId }} HTTP/1.1
+
+### GET /
+GET {{ server }}/{{ endPoint }}?category=Category HTTP/1.1
+
+### DELETE /:id
+DELETE {{ server }}/{{ endPoint }}/{{ gigId }} HTTP/1.1
+
+### POST /:id/reviews
+POST {{ server }}/{{ endPoint }}/{{ gigId }}/reviews HTTP/1.1
+Content-Type: application/json
+
+{
+  "star": 4,
+  "description": "Aaking it look like readable English. Many desktop publishing packages and web page editor"
+}
+
+### GET /:id/reviews
+GET {{ server }}/{{ endPoint }}/{{ gigId }}/reviews HTTP/1.1
+
+### DELETE /:id/reviews
+DELETE {{ server }}/{{ endPoint }}/{{ gigId }}/reviews HTTP/1.1
+
+### GET /:id/orders
+GET {{ server }}/{{ endPoint }}/{{ gigId }}/orders HTTP/1.1
