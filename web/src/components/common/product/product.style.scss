@@ -1,0 +1,49 @@
+@import 'src/config/styles/mixins.scss';
+
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+
+  &:hover {
+    .product--image img {
+      transform: scale(1.2);
+    }
+  }
+
+  .product--image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 180px;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 25px;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .product--description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+
+    .product--description-title {
+      font-size: 14px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .product--description-price {
+      font-size: 18px;
+    }
+  }
+}
