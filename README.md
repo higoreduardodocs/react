@@ -22,5 +22,6 @@ Applications developed in React and other auxiliary technologies
 > Full Stack:
 
 - Code hero: [full-stack/code-hero](https://github.com/higoreduardodocs/react/tree/full-stack/code-hero)
+- Fiverr jobs: [full-stack/fiverr-jobs](https://github.com/higoreduardodocs/react/tree/full-stack/fiverr-jobs)
 
 > :copyright: [Higor Eduardo Docs](https://github.com/higoreduardodocs)
