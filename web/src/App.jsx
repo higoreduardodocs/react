@@ -1,6 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import Header from './components/header'
+import Newsletter from './components/newsletter'
+import Footer from './components/footer'
+
 import Home from './pages/home'
 import Category from './pages/category'
 import Product from './pages/product'
@@ -17,6 +20,8 @@ export default function App() {
           <Route path="/product/:id" element={<Product />} />
           <Route path="/success" element={<Success />} />
         </Routes>
+        <Newsletter />
+        <Footer />
       </Router>
     </main>
   )
