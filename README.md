@@ -1,26 +1,28 @@
-# :desktop_computer: React Application
+Application developed in Next, Express and Mongo
 
-Applications developed in React and other auxiliary technologies
+> :fire: Development
 
-> Chat App:
+```
+  docker compose up -d && docker inspect mongo | grep IPAddress
+  cd web && yarn && yarn dev
+  cd server && yarn && yarn dev
+```
 
-- First release: [chat-app/first-release](https://github.com/higoreduardodocs/react/tree/chat-app/first-release)
-- Second release: [chat-app/second-release](https://github.com/higoreduardodocs/react/tree/chat-app/second-release)
+> :gear: Environment Variables
 
-> Client App:
+- Client URL: CLIENT_URL `server`
+- Server Port: SERVER_PORT `server`
+- Mongo URL: MONGODB_URI `server`
+- JWT secret: JWT_SECRET `server`
+- Stripe private key: PAYMENT_STRIPE_PRIVATE_KEY `server`
+- Client Url: VITE_CLIENT_URL `web`
+- Server Url: VITE_SERVER_URL `web`
+- Cloudinary name: VITE_CLOUDINARY_CLOUD_NAME `web`
+- Cloudinary Id: VITE_CLOUDINARY_CLOUD_ID `web`
+- Cloudinary preset: VITE_CLOUDINARY_CLOUD_PRESET `web`
+- Stripe public Key: VITE_PAYMENT_STRIPE_PUBLIC_KEY `web`
 
-- Movielia: [client-app/movielia](https://github.com/higoreduardodocs/react/tree/client-app/movielia)
+> :thought_balloon: `Lama Dev`
 
-> Clone App:
-
-- Social App: [clone-app/social-app](https://github.com/higoreduardodocs/react/tree/clone-app/social-app)
-
-> Ecommerce App:
-
-- First release: [ecommerce-app/first-release](https://github.com/higoreduardodocs/react/tree/ecommerce-app/first-release)
-
-> Full Stack:
-
-- Code hero: [full-stack/code-hero](https://github.com/higoreduardodocs/react/tree/full-stack/code-hero)
-
-> :copyright: [Higor Eduardo Docs](https://github.com/higoreduardodocs)
+![Cover](./assets/cover.png)
+![Cover](./assets/cover.gif)
