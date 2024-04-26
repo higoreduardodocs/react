@@ -8,6 +8,7 @@ import Home from './pages/home'
 import Login from './pages/login'
 import Register from './pages/register'
 import Gigs from './pages/gigs'
+import GigsAdd from './pages/gigs-add'
 
 const Layout = () => {
   const queryClient = new QueryClient()
@@ -46,6 +47,10 @@ export default function App() {
         {
           path: '/gigs',
           element: <Gigs />,
+        },
+        {
+          path: '/create-gig',
+          element: <GigsAdd />,
         },
       ],
     },
