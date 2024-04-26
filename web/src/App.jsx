@@ -9,6 +9,7 @@ import Login from './pages/login'
 import Register from './pages/register'
 import Gigs from './pages/gigs'
 import GigsAdd from './pages/gigs-add'
+import GigId from './pages/gig-id'
 
 const Layout = () => {
   const queryClient = new QueryClient()
@@ -51,6 +52,10 @@ export default function App() {
         {
           path: '/create-gig',
           element: <GigsAdd />,
+        },
+        {
+          path: '/gigs/:id',
+          element: <GigId />,
         },
       ],
     },
