@@ -6,6 +6,7 @@ import Navbar from './components/navbar'
 import Footer from './components/footer'
 import Home from './pages/home'
 import Login from './pages/login'
+import Register from './pages/register'
 
 const Layout = () => {
   const queryClient = new QueryClient()
@@ -36,6 +37,10 @@ export default function App() {
         {
           path: '/login',
           element: <Login />,
+        },
+        {
+          path: '/register',
+          element: <Register />,
         },
       ],
     },
