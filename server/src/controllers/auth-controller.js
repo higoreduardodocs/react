@@ -12,7 +12,7 @@ export const create = async (req, res, next) => {
       password: hashedPassword,
     })
     const { password, ...createdPublicUser } = createdUser._doc
-    return res.status(201).json({ user: createdPublicUser })
+    return res.status(201).json(createdPublicUser)
   } catch (error) {
     next(error)
   }
@@ -38,7 +38,7 @@ export const login = async (req, res, next) => {
     return res
       .cookie('accessToken', token, { httpOnly: true })
       .status(200)
-      .json({ user: logedPublicUser })
+      .json(logedPublicUser)
   } catch (error) {
     next(error)
   }

@@ -7,7 +7,7 @@ export const findById = async (req, res, next) => {
     if (!user) next(exception(404, 'User not found'))
 
     const { password, ...userPublic } = user._doc
-    return res.status(200).json({ user: userPublic })
+    return res.status(200).json(userPublic)
   } catch (error) {
     next(error)
   }
