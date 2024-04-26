@@ -1,0 +1,58 @@
+.content,
+.description,
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.description {
+  flex: 2;
+}
+
+.list {
+  height: 50vh;
+  overflow-y: auto;
+  padding: 0 10px;
+}
+
+.list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.list::-webkit-scrollbar-track {
+  background: none;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 5px;
+}
+
+.calendar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  background-color: #ccc;
+  color: #000;
+  height: fit-content;
+}
+
+.day {
+  background-color: #ccc;
+  color: #000;
+  width: 30px;
+  height: 30px;
+}
+
+.selected {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
