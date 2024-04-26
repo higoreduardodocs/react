@@ -7,6 +7,7 @@ import { getAllFoodItems } from './utils/firebase'
 import { actionType } from './contexts/reducer'
 import Header from './components/header'
 import Home from './pages/home'
+import Create from './pages/create'
 
 export default function App() {
   const [dispatch] = useStateValue()
@@ -33,6 +34,7 @@ export default function App() {
           <main className="w-screen mt-24 p-8">
             <Routes>
               <Route path="/*" element={<Home />} />
+              <Route path="/create" element={<Create />} />
             </Routes>
           </main>
         </div>
