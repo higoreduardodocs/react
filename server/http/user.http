@@ -1,0 +1,9 @@
+@server=http://localhost:3001
+@endPoint=users
+@userId=662b22349347f1f8d36879e5
+
+### GET /:id
+GET {{ server }}/{{ endPoint }}/{{ userId }} HTTP/1.1
+
+### DELETE /:id
+DELETE {{ server }}/{{ endPoint }}/{{ userId }} HTTP/1.1
