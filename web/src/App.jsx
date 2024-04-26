@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import UserProvider from './contexts/user-context'
 import Navbar from './components/navbar'
 import Footer from './components/footer'
+import Home from './pages/home'
 
 const Layout = () => {
   const queryClient = new QueryClient()
@@ -29,7 +30,7 @@ export default function App() {
       children: [
         {
           path: '/',
-          element: <>Home</>,
+          element: <Home />,
         },
       ],
     },
