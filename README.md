@@ -1,27 +1,35 @@
-# :desktop_computer: React Application
+Application developed in React and Firebase
 
-Applications developed in React and other auxiliary technologies
+> :fire: Development
 
-> Chat App:
+```
+cd web && yarn && yarn dev
+```
 
-- First release: [chat-app/first-release](https://github.com/higoreduardodocs/react/tree/chat-app/first-release)
-- Second release: [chat-app/second-release](https://github.com/higoreduardodocs/react/tree/chat-app/second-release)
+> :gear: Environment Variables
 
-> Client App:
+- Firebase API Key: VITE_FIREBASE_API_KEY `web`
+- Firebase Auth Domain: VITE_FIREBASE_AUTH_DOMAIN `web`
+- Firebase Database URL: VITE_FIREBASE_DATABASE_URL `web`
+- Firebase Project ID: VITE_FIREBASE_PROJECT_ID `web`
+- Firebase Storage Bucket: VITE_FIREBASE_STORAGE_BUCKET `web`
+- Firebase Messaging Sender ID: VITE_FIREBASE_MESSAGING_ID `web`
+- Firebase APP ID: VITE_FIREBASE_APP_ID `web`
 
-- Movielia: [client-app/movielia](https://github.com/higoreduardodocs/react/tree/client-app/movielia)
+> :thought_balloon: `Vetrivel Ravi`
 
-> Clone App:
+![Cover](./assets/cover.png)
 
-- Social App: [clone-app/social-app](https://github.com/higoreduardodocs/react/tree/clone-app/social-app)
+<details>
+<summary>:scroll: Roles</summary>
 
-> Ecommerce App:
+- **Firebase Config:**
+  - Project: create project -> food
+  - Firestore: firestore database -> create database -> mode production -> enable rules: rules -> true
+  - Realtime: realtime database -> create database -> looked mode -> enable rules: rules -> write: true
+  - Storage: add folder (images) -> enable rules: rules -> true
+  - Settings: project settings -> web -> foodapp
+  - Authentication: Authentication -> Google Auth
+  - Flowbit: `https://flowbite.com/`
 
-- First release: [ecommerce-app/first-release](https://github.com/higoreduardodocs/react/tree/ecommerce-app/first-release)
-
-> Full Stack:
-
-- Code hero: [full-stack/code-hero](https://github.com/higoreduardodocs/react/tree/full-stack/code-hero)
-- Fiverr jobs: [full-stack/fiverr-jobs](https://github.com/higoreduardodocs/react/tree/full-stack/fiverr-jobs)
-
-> :copyright: [Higor Eduardo Docs](https://github.com/higoreduardodocs)
+</details>
