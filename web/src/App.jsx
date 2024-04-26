@@ -12,6 +12,7 @@ import GigsAdd from './pages/gigs-add'
 import GigId from './pages/gig-id'
 import GigsPortfolio from './pages/gigs-portfolio'
 import Payment from './pages/payment'
+import Success from './pages/success'
 
 const Layout = () => {
   const queryClient = new QueryClient()
@@ -66,6 +67,10 @@ export default function App() {
         {
           path: '/payment/:gigId',
           element: <Payment />,
+        },
+        {
+          path: '/success',
+          element: <Success />,
         },
       ],
     },
