@@ -5,6 +5,7 @@ import UserProvider from './contexts/user-context'
 import Navbar from './components/navbar'
 import Footer from './components/footer'
 import Home from './pages/home'
+import Login from './pages/login'
 
 const Layout = () => {
   const queryClient = new QueryClient()
@@ -31,6 +32,10 @@ export default function App() {
         {
           path: '/',
           element: <Home />,
+        },
+        {
+          path: '/login',
+          element: <Login />,
         },
       ],
     },
