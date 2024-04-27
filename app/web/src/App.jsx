@@ -15,6 +15,7 @@ export default function App() {
           element={<Pages.Public.CategoryProducts />}
         />
         <Route path="/search/:search" element={<Pages.Public.Search />} />
+        <Route path="/cart" element={<Pages.Public.Cart />} />
       </Routes>
     </Router>
   )
