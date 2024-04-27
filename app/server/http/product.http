@@ -1,0 +1,68 @@
+@server = http://localhost:3001
+@endPoint = products
+@productId = 662d079a4a4652216d9f092c
+@page = 1
+@search = Tru
+@categoryId = 662d045f45521acbf1c019ef
+
+### POST /register
+POST {{ server }}/{{ endPoint }}/register HTTP/1.1
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjJkMDI5NzRkM2ZmNGMxZjI2YzgxZDAiLCJpYXQiOjE3MTQyMjYyNTUsImV4cCI6MTcxNDgzMTA1NX0.Vxmixva_ZvjGrP_QAC1CWpMxZ_XQO-kgDGSdU0mhVEo
+
+{
+  "category": "662d045f45521acbf1c019ef",
+  "name": "Fake name",
+  "description": "Fake description",
+  "price": 30.80,
+  "quantity": 10,
+  "shipping": true
+}
+
+### PUT /:id
+PUT {{ server }}/{{ endPoint }}/{{ productId }} HTTP/1.1
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjJkMDI5NzRkM2ZmNGMxZjI2YzgxZDAiLCJpYXQiOjE3MTQyMjYyNTUsImV4cCI6MTcxNDgzMTA1NX0.Vxmixva_ZvjGrP_QAC1CWpMxZ_XQO-kgDGSdU0mhVEo
+
+{
+  "category": "6476978a192ca206b8438bb4",
+  "name": "Fake name updated",
+  "description": "Fake description",
+  "price": 19.80,
+  "quantity": 10,
+  "shipping": true
+}
+
+### GET /
+GET {{ server }}/{{ endPoint }} HTTP/1.1
+
+### GET /:id
+GET {{ server }}/{{ endPoint }}/{{ productId }} HTTP/1.1
+
+### GET /:id/photo
+GET {{ server }}/{{ endPoint }}/{{ productId }}/photo HTTP/1.1
+
+### DELETE /:id
+DELETE {{ server }}/{{ endPoint }}/{{ productId }} HTTP/1.1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDgzZTgyN2E1M2I4MjVhZTAxYTUzMmEiLCJpYXQiOjE2ODYzNjYyNTMsImV4cCI6MTY4Njk3MTA1M30.FqDr5yc8ShoBpsSlM9urBK7Dxs0XM_Wq5fTuigbz3-o
+
+### GET /filter
+GET {{ server }}/{{ endPoint }}/filter HTTP/1.1
+content-type: application/json
+
+{
+    "categories": ["662d045f45521acbf1c019ef"],
+    "priceRange": [0, 10]
+}
+
+### GET /count
+GET {{ server }}/{{ endPoint }}/count HTTP/1.1
+
+### GET /paginate/:page
+GET {{ server }}/{{ endPoint }}/paginate/{{ page }} HTTP/1.1
+
+### GET /search/:search
+GET {{ server }}/{{ endPoint }}/search/{{ search }} HTTP/1.1
+
+### GET /:id/related/:category
+GET {{ server }}/{{ endPoint }}/{{ productId }}/related/{{ categoryId }} HTTP/1.1
