@@ -10,6 +10,7 @@ Applications developed in React and other auxiliary technologies
 > Client App:
 
 - Movielia: [client-app/movielia](https://github.com/higoreduardodocs/react/tree/client-app/movielia)
+- Threejs portfolio: [client-app/threejs-portfolio](https://github.com/higoreduardodocs/react/tree/client-app/threejs-portfolio)
 
 > Clone App:
 
