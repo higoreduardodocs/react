@@ -14,6 +14,7 @@ export default function App() {
           path="/category/:slug"
           element={<Pages.Public.CategoryProducts />}
         />
+        <Route path="/search/:search" element={<Pages.Public.Search />} />
       </Routes>
     </Router>
   )
