@@ -1,32 +1,18 @@
-# :desktop_computer: React Application
+Application developed in React
 
-Applications developed in React and other auxiliary technologies
+> :fire: Development
 
-> Chat App:
+```
+  cd web && yarn && yarn dev
+```
 
-- First release: [chat-app/first-release](https://github.com/higoreduardodocs/react/tree/chat-app/first-release)
-- Second release: [chat-app/second-release](https://github.com/higoreduardodocs/react/tree/chat-app/second-release)
+> :gear: Environment Variables
 
-> Client App:
+- EmailJs Service ID: VITE_EMAILJS_SERVICE_ID `web`
+- EmailJs Template ID: VITE_EMAILJS_TEMPLATE_ID `web`
+- EmailJs Public Key: VITE_EMAILJS_PUBLIC_KEY `web`
 
-- Movielia: [client-app/movielia](https://github.com/higoreduardodocs/react/tree/client-app/movielia)
+> :thought_balloon: `Lama Dev`
 
-> Clone App:
-
-- Social App: [clone-app/social-app](https://github.com/higoreduardodocs/react/tree/clone-app/social-app)
-
-> Ecommerce App:
-
-- First release: [ecommerce-app/first-release](https://github.com/higoreduardodocs/react/tree/ecommerce-app/first-release)
-- Second release: [ecommerce-app/second-release](https://github.com/higoreduardodocs/react/tree/ecommerce-app/second-release)
-
-> Food App:
-
-- First release: [food-app/first-release](https://github.com/higoreduardodocs/react/tree/food-app/first-release)
-
-> Full Stack:
-
-- Code hero: [full-stack/code-hero](https://github.com/higoreduardodocs/react/tree/full-stack/code-hero)
-- Fiverr jobs: [full-stack/fiverr-jobs](https://github.com/higoreduardodocs/react/tree/full-stack/fiverr-jobs)
-
-> :copyright: [Higor Eduardo Docs](https://github.com/higoreduardodocs)
+![Cover](./assets/cover.png)
+![Cover](./assets/cover.gif)
