@@ -7,6 +7,7 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Pages.Public.Home />} />
+        <Route path="/login" element={<Pages.Public.Login />} />
         <Route path="/product/:id" element={<Pages.Public.Product />} />
       </Routes>
     </Router>
