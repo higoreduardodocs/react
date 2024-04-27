@@ -1,0 +1,24 @@
+@server = http://localhost:3001
+@endPoint = orders
+@orderId = 64774437c3af05deb1d3c153
+
+### GET /generate-payment-token
+GET {{ server }}/{{ endPoint }}/generate-payment-token HTTP/1.1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjJkMDI5NzRkM2ZmNGMxZjI2YzgxZDAiLCJpYXQiOjE3MTQyMjc4NzgsImV4cCI6MTcxNDgzMjY3OH0.8bsZsCv6gR8pQjHEn0Yth85-In1WiO40q3rnAHXn2cE
+
+### GET /administrator
+GET {{ server }}/{{ endPoint }}/administrator HTTP/1.1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjJkMDI5NzRkM2ZmNGMxZjI2YzgxZDAiLCJpYXQiOjE3MTQyMjc4NzgsImV4cCI6MTcxNDgzMjY3OH0.8bsZsCv6gR8pQjHEn0Yth85-In1WiO40q3rnAHXn2cE
+
+### GET /customer
+GET {{ server }}/{{ endPoint }}/customer HTTP/1.1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDc3NGQzM2JlZjMxNzE0MGIwNGVhYzgiLCJpYXQiOjE2ODU1NDAxNTYsImV4cCI6MTY4NjE0NDk1Nn0.4R20i71MjDooTRPs4k_crwWkCslJg5zQG-Q5M2AaK2Q
+
+### PUT /:id
+PUT {{ server }}/{{ endPoint }}/{{ orderId }} HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDc2OGFmMWQ3M2E1MGJkYTllYWQ2ZjAiLCJpYXQiOjE2ODU1NDI0OTYsImV4cCI6MTY4NjE0NzI5Nn0.MFVzk6tdvBwlWfreE-ngHNNTux5ztX7Jbrz7D3T4xCc
+
+{
+  "status": "shipped"
+}
