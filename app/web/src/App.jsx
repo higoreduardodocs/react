@@ -16,6 +16,10 @@ export default function App() {
         />
         <Route path="/search/:search" element={<Pages.Public.Search />} />
         <Route path="/cart" element={<Pages.Public.Cart />} />
+        <Route
+          path="/forgot-password"
+          element={<Pages.Public.ForgotPassword />}
+        />
       </Routes>
     </Router>
   )
