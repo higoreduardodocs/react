@@ -10,6 +10,10 @@ export default function App() {
         <Route path="/login" element={<Pages.Public.Login />} />
         <Route path="/product/:id" element={<Pages.Public.Product />} />
         <Route path="/categories" element={<Pages.Public.Categories />} />
+        <Route
+          path="/category/:slug"
+          element={<Pages.Public.CategoryProducts />}
+        />
       </Routes>
     </Router>
   )
