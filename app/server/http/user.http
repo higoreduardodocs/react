@@ -1,0 +1,72 @@
+@server = http://localhost:3001
+@endPoint = users
+@userId = 662d00299c9eae48708b9224
+
+### GET /user-validate
+GET {{ server }}/{{ endPoint }}/user-validate HTTP/1.1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjJkMDAyOTljOWVhZTQ4NzA4YjkyMjQiLCJpYXQiOjE3MTQyMjUyMDcsImV4cCI6MTcxNDgzMDAwN30.lNblmp4JJMOs9DGLBFg9wdylsUDn6-E44NiP-JB3i6g
+
+### GET /admin-validate
+GET {{ server }}/{{ endPoint }}/admin-validate HTTP/1.1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjJkMDAyOTljOWVhZTQ4NzA4YjkyMjQiLCJpYXQiOjE3MTQyMjUyMDcsImV4cCI6MTcxNDgzMDAwN30.lNblmp4JJMOs9DGLBFg9wdylsUDn6-E44NiP-JB3i6g
+
+### GET /
+GET {{ server }}/{{ endPoint }}/ HTTP/1.1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjJkMDAyOTljOWVhZTQ4NzA4YjkyMjQiLCJpYXQiOjE3MTQyMjUyMDcsImV4cCI6MTcxNDgzMDAwN30.lNblmp4JJMOs9DGLBFg9wdylsUDn6-E44NiP-JB3i6g
+
+### POST /register
+POST {{ server }}/{{ endPoint }}/register HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Fake admin",
+    "email": "fakeadmin@email.com",
+    "password": "fakepass",
+    "phone": "00123456798",
+    "address": "Main St. 193",
+    "role": "administrator"
+}
+
+### POST /login
+POST {{ server }}/{{ endPoint }}/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "fakeadmin@email.com",
+    "password": "fakepass"
+}
+
+### PUT /
+PUT {{ server }}/{{ endPoint }} HTTP/1.1
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjJkMDAyOTljOWVhZTQ4NzA4YjkyMjQiLCJpYXQiOjE3MTQyMjUyMDcsImV4cCI6MTcxNDgzMDAwN30.lNblmp4JJMOs9DGLBFg9wdylsUDn6-E44NiP-JB3i6g
+
+{
+    "name": "Fake name updated",
+    "password": "fakepass",
+    "phone": "00123456798",
+    "address": "Main St. 1930"
+}
+
+### PUT /reset-password
+PUT {{ server }}/{{ endPoint }}/reset-password HTTP/1.1
+content-type: application/json
+
+{
+    "email": "fakeadmin@email.com",
+    "newPassword": "fakepass"
+}
+
+### PUT /change-password
+PUT {{ server }}/{{ endPoint }}/change-password HTTP/1.1
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjJkMDAyOTljOWVhZTQ4NzA4YjkyMjQiLCJpYXQiOjE3MTQyMjUyMDcsImV4cCI6MTcxNDgzMDAwN30.lNblmp4JJMOs9DGLBFg9wdylsUDn6-E44NiP-JB3i6g
+
+{
+    "password": "fakepass",
+    "newPassword": "fakepass"
+}
+
+### DELETE /
+DELETE {{ server }}/{{ endPoint }}/{{ userId }} HTTP/1.1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjJkMDAyOTljOWVhZTQ4NzA4YjkyMjQiLCJpYXQiOjE3MTQyMjUyMDcsImV4cCI6MTcxNDgzMDAwN30.lNblmp4JJMOs9DGLBFg9wdylsUDn6-E44NiP-JB3i6g
