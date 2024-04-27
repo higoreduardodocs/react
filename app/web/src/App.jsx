@@ -20,6 +20,8 @@ export default function App() {
           path="/forgot-password"
           element={<Pages.Public.ForgotPassword />}
         />
+
+        <Route path="/*" element={<Pages.Public.NotFound />} />
       </Routes>
     </Router>
   )
