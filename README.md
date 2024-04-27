@@ -1,31 +1,25 @@
-# :desktop_computer: React Application
+Application developed in React, Express and Mongo
 
-Applications developed in React and other auxiliary technologies
+> :fire: Development
 
-> Chat App:
+```
+  docker compose up -d && docker inspect mongo | grep IPAddress
+  cd app && yarn
+  cd app/web && yarn
+  cd app && yarn dev
+```
 
-- First release: [chat-app/first-release](https://github.com/higoreduardodocs/react/tree/chat-app/first-release)
-- Second release: [chat-app/second-release](https://github.com/higoreduardodocs/react/tree/chat-app/second-release)
+> :gear: Environment Variables
 
-> Client App:
+- Server port: SERVER_PORT `app`
+- JWT secret: JWT_SECRET `app`
+- Mongo URL: MONGO_URL `app`
+- Braintree merchant ID : PAYMENT_MERCHANT_ID `app`
+- Braintree public key: PAYMENT_PUBLIC_KEY `app`
+- Braintree private key: PAYMENT_PRIVATE_KEY `app`
+- Server URL: VITE_SERVER_URL `web`
 
-- Movielia: [client-app/movielia](https://github.com/higoreduardodocs/react/tree/client-app/movielia)
+> :thought_balloon: `Tech Info`
 
-> Clone App:
-
-- Social App: [clone-app/social-app](https://github.com/higoreduardodocs/react/tree/clone-app/social-app)
-
-> Ecommerce App:
-
-- First release: [ecommerce-app/first-release](https://github.com/higoreduardodocs/react/tree/ecommerce-app/first-release)
-
-> Food App:
-
-- First release: [food-app/first-release](https://github.com/higoreduardodocs/react/tree/food-app/first-release)
-
-> Full Stack:
-
-- Code hero: [full-stack/code-hero](https://github.com/higoreduardodocs/react/tree/full-stack/code-hero)
-- Fiverr jobs: [full-stack/fiverr-jobs](https://github.com/higoreduardodocs/react/tree/full-stack/fiverr-jobs)
-
-> :copyright: [Higor Eduardo Docs](https://github.com/higoreduardodocs)
+![Cover](./assets/cover.png)
+![Cover](./assets/cover.gif)
