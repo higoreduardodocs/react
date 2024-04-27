@@ -18,6 +18,7 @@ Applications developed in React and other auxiliary technologies
 > Ecommerce App:
 
 - First release: [ecommerce-app/first-release](https://github.com/higoreduardodocs/react/tree/ecommerce-app/first-release)
+- Second release: [ecommerce-app/second-release](https://github.com/higoreduardodocs/react/tree/ecommerce-app/second-release)
 
 > Food App:
 
