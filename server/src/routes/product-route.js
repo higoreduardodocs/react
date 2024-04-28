@@ -29,7 +29,7 @@ router.delete(
   productController.remove
 )
 router.get('/:id', productController.findById)
-// router.get("/", productController.findAll);
+router.get("/", productController.findAll);
 router.put(
   '/:id/wishlist-toggle',
   authMiddleware.auth,

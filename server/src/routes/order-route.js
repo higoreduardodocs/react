@@ -44,5 +44,11 @@ router.get(
   authMiddleware.admin,
   orderController.findAll
 )
+router.delete(
+  '/:id',
+  authMiddleware.auth,
+  authMiddleware.admin,
+  orderController.remove
+)
 
 module.exports = router

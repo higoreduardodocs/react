@@ -156,6 +156,15 @@ const update = asyncHandler(async (req, res, next) => {
   }
 })
 
+const remove = asyncHandler(async (req, res, next) => {
+  try {
+    await Order.findByIdAndDelete(req.params.id)
+    res.sendStatus(204)
+  } catch (error) {
+    next(error)
+  }
+})
+
 module.exports = {
   save,
   applyCoupon,
@@ -164,4 +173,5 @@ module.exports = {
   findById,
   findAll,
   update,
+  remove,
 }

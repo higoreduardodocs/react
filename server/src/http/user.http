@@ -1,6 +1,6 @@
 @server = http://localhost:3002
 @endPoint = api/users
-@userId = 662d9c294ae457ec0f48bdb2
+@userId = 662e4aab14a72c60035fe9d6
 
 ### POST /
 POST {{ server }}/{{ endPoint }} HTTP/1.1
@@ -11,6 +11,7 @@ Content-Type: application/json
   "email": "fakeemail@email.com",
   "mobile": "119997899999",
   "password": "fakepass",
+  "role": "admin",
   "address": {
     "street": "Fake street",
     "neighborhood": "Fake Neighborhood",

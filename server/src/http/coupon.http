@@ -1,0 +1,33 @@
+@server = http://localhost:3002
+@endPoint = api/coupons
+@couponIn = 662e4eb86a55d308d5d0d1c0
+
+### POST /
+POST {{ server }}/{{ endPoint }} HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "SUM123",
+  "expiry": "Wed Jun 21 2023 19:28:37 GMT-0300",
+  "discount": 30,
+  "quantityMax": 50,
+  "quantityPerUser": 2
+}
+
+### PUT /:id
+PUT {{ server }}/{{ endPoint }}/{{ couponIn }} HTTP/1.1
+Content-Type: application/json
+
+{
+  "quantityMax": 90,
+  "quantityPerUser": 1
+}
+
+### DELETE /:id
+DELETE  {{ server }}/{{ endPoint }}/{{ couponIn }} HTTP/1.1
+
+### GET /:id
+GET  {{ server }}/{{ endPoint }}/{{ couponIn }} HTTP/1.1
+
+### GET /
+GET  {{ server }}/{{ endPoint }} HTTP/1.1

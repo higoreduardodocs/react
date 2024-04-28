@@ -1,0 +1,30 @@
+@server = http://localhost:3002
+@endPoint = api/categories
+@categoryId = 662d045f45521acbf1c019ef
+
+### POST /
+POST {{ server }}/{{ endPoint }} HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Fake new category",
+  "image": "https://server.com/public/images/fake-brand.jpg"
+}
+
+### PUT /:id
+PUT {{ server }}/{{ endPoint }}/{{ categoryId }} HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Fake new brand",
+  "image": "https://server.com/public/images/fake-brand.jpg"
+}
+
+### DELETE /:id
+DELETE  {{ server }}/{{ endPoint }}/{{ categoryId }} HTTP/1.1
+
+### GET /:id
+GET  {{ server }}/{{ endPoint }}/{{ categoryId }} HTTP/1.1
+
+### GET /
+GET  {{ server }}/{{ endPoint }} HTTP/1.1

@@ -1,0 +1,30 @@
+@server = http://localhost:3002
+@endPoint = api/colors
+@colorId = 662e4e3514a72c60035fe9f4
+
+### POST /
+POST {{ server }}/{{ endPoint }} HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "White",
+  "hex": "#fff"
+}
+
+### PUT /:id
+PUT {{ server }}/{{ endPoint }}/{{ colorId }} HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Light",
+  "hex": "#fff"
+}
+
+### DELETE /:id
+DELETE  {{ server }}/{{ endPoint }}/{{ colorId }} HTTP/1.1
+
+### GET /:id
+GET  {{ server }}/{{ endPoint }}/{{ colorId }} HTTP/1.1
+
+### GET /
+GET  {{ server }}/{{ endPoint }} HTTP/1.1

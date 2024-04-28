@@ -1,0 +1,30 @@
+@server = http://localhost:3002
+@endPoint = api/brands
+@brandId = 662e4ab914a72c60035fe9dc
+
+### POST /
+POST {{ server }}/{{ endPoint }} HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Fake brand",
+  "image": "https://server.com/public/images/fake-brand.jpg"
+}
+
+### PUT /:id
+PUT {{ server }}/{{ endPoint }}/{{ brandId }} HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Fake new brand",
+  "image": "https://server.com/public/images/fake-brand.jpg"
+}
+
+### DELETE /:id
+DELETE  {{ server }}/{{ endPoint }}/{{ brandId }} HTTP/1.1
+
+### GET /:id
+GET  {{ server }}/{{ endPoint }}/{{ brandId }} HTTP/1.1
+
+### GET /
+GET  {{ server }}/{{ endPoint }} HTTP/1.1

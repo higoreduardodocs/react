@@ -8,6 +8,7 @@ const save = {
     password: Joi.string()
       .regex(/[a-zA-Z0-9]{3,30}/)
       .required(),
+    role: Joi.string().optional().allow(null),
     address: Joi.object({
       street: Joi.string().required(),
       neighborhood: Joi.string().required(),

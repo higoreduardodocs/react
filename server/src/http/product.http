@@ -1,0 +1,57 @@
+@server = http://localhost:3002
+@endPoint = api/products
+@productId = 662e54c32a37237f7d417899
+
+### POST /
+POST {{ server }}/{{ endPoint }} HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Fake prod",
+  "description": "Fake description",
+  "category": "662e4e0514a72c60035fe9ea",
+  "brand": "662e4dd814a72c60035fe9e5",
+  "price": 123,
+  "stock": 456,
+  "cover": {
+    "public_id": "6489akjlsdh",
+    "url": "https://server.com/public/images/fake-brand.jpg"
+  },
+  "images": [
+    {
+      "public_id": "6489akjlsdh",
+      "url": "https://server.com/public/images/fake-brand.jpg"
+    }
+  ],
+  "sizes": ["662e4eed6a55d308d5d0d1d5"],
+  "colors": ["662e4e4214a72c60035fe9fe"]
+}
+
+### PUT /:id
+PUT {{ server }}/{{ endPoint }}/{{ productId }} HTTP/1.1
+Content-Type: application/json
+
+{
+  "tags": ["Fake tag"]
+}
+
+### DELETE /:id
+DELETE  {{ server }}/{{ endPoint }}/{{ productId }} HTTP/1.1
+
+### GET /:id
+GET  {{ server }}/{{ endPoint }}/{{ productId }} HTTP/1.1
+
+### GET /
+GET  {{ server }}/{{ endPoint }} HTTP/1.1
+
+### PUT /:id/wishlist-toggle
+PUT {{ server }}/{{ endPoint }}/{{ productId }}/wishlist-toggle HTTP/1.1
+
+### POST /:id/review
+POST {{ server }}/{{ endPoint }}/{{ productId }}/review HTTP/1.1
+Content-Type: application/json
+
+{
+  "stars": 5,
+  "description": "Fake description"
+}

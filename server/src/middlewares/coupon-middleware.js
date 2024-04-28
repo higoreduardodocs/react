@@ -5,7 +5,7 @@ const save = {
     name: Joi.string().required(),
     expiry: Joi.date().required(),
     discount: Joi.number().required(),
-    quantity: Joi.number().required(),
+    quantityMax: Joi.number().required(),
     quantityPerUser: Joi.number().optional(),
   }),
 }
@@ -18,7 +18,7 @@ const update = {
     name: Joi.string().optional(),
     expiry: Joi.date().optional(),
     discount: Joi.number().optional(),
-    quantity: Joi.number().optional(),
+    quantityMax: Joi.number().optional(),
     quantityPerUser: Joi.number().optional(),
   }),
 }

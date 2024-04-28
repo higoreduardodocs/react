@@ -1,0 +1,37 @@
+@server = http://localhost:3002
+@endPoint = api/orders
+@orderId = 662e55df2a37237f7d4178a3
+
+### POST /
+POST {{ server }}/{{ endPoint }} HTTP/1.1
+Content-Type: application/json
+
+{
+  "cart": [
+    {
+      "_id": "64938b8824426e2b21d450fb",
+      "quantity": 1,
+      "color": "662e4e4214a72c60035fe9fe",
+      "size": "662e4eed6a55d308d5d0d1d5"
+    }
+  ],
+  "shipping": 12,
+  "paymentIntent": "649387735730506009f1c600"
+}
+
+### PUT /:id
+PUT {{ server }}/{{ endPoint }}/{{ orderId }} HTTP/1.1
+Content-Type: application/json
+
+{
+  "status": "Processing"
+}
+
+### DELETE /:id
+DELETE  {{ server }}/{{ endPoint }}/{{ orderId }} HTTP/1.1
+
+### GET /:id
+GET  {{ server }}/{{ endPoint }}/{{ orderId }} HTTP/1.1
+
+### GET /
+GET  {{ server }}/{{ endPoint }} HTTP/1.1

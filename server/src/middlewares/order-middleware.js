@@ -29,7 +29,7 @@ const update = {
     id: Joi.string().alphanum().length(24).required(),
   }),
   body: Joi.object({
-    body: Joi.string().required(),
+    status: Joi.string().required(),
   }),
 }
 
