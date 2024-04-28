@@ -4,6 +4,9 @@ import SignIn from './pages/sign-in'
 import ForgotPassword from './pages/forgot-password'
 import ResetPassword from './pages/reset-password'
 
+import Layout from './components/layout'
+import Dashboard from './pages/dashboard'
+
 export default function App() {
   return (
     <Router>
@@ -11,6 +14,10 @@ export default function App() {
         <Route path="/" element={<SignIn />} />
         <Route path="/recuperar-senha" element={<ForgotPassword />} />
         <Route path="/redefinir-senha" element={<ResetPassword />} />
+
+        <Route path="/admin" element={<Layout />}>
+          <Route path="" element={<Dashboard />} />
+        </Route>
       </Routes>
     </Router>
   )
