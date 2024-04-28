@@ -15,6 +15,7 @@ import Orders from './pages/orders'
 import Coupons from './pages/coupons'
 import Blogs from './pages/blog/blogs'
 import BlogCategories from './pages/blog/categories'
+import Shipping from './pages/shipping'
 
 export default function App() {
   return (
@@ -35,6 +36,7 @@ export default function App() {
           <Route path="cupons" element={<Coupons />} />
           <Route path="blogs" element={<Blogs />} />
           <Route path="blogs-categorias" element={<BlogCategories />} />
+          <Route path="entregas" element={<Shipping />} />
         </Route>
       </Routes>
     </Router>
