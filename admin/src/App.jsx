@@ -10,6 +10,7 @@ import Customers from './pages/customers'
 import CatalogProducts from './pages/catalog/products'
 import CatalogBrands from './pages/catalog/brands'
 import CatalogCategories from './pages/catalog/categories'
+import CatalogColors from './pages/catalog/colors'
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="produtos" element={<CatalogProducts />} />
           <Route path="marcas" element={<CatalogBrands />} />
           <Route path="categorias" element={<CatalogCategories />} />
+          <Route path="cores" element={<CatalogColors />} />
         </Route>
       </Routes>
     </Router>
