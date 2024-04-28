@@ -7,6 +7,7 @@ import ResetPassword from './pages/reset-password'
 import Layout from './components/layout'
 import Dashboard from './pages/dashboard'
 import Customers from './pages/customers'
+import CatalogProducts from './pages/catalog/products'
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/admin" element={<Layout />}>
           <Route path="" element={<Dashboard />} />
           <Route path="clientes" element={<Customers />} />
+          <Route path="produtos" element={<CatalogProducts />} />
         </Route>
       </Routes>
     </Router>
