@@ -1,0 +1,12 @@
+const mongoose = require('mongoose')
+
+const couponSchema = new mongoose.Schema({
+  name: { type: String, required: true, unique: true, uppercase: true },
+  expiry: { type: Date, required: true },
+  discount: { type: Number, required: true },
+  quantityMax: { type: Number, required: true },
+  quantityCount: { type: Number, default: 0 },
+  quantityPerUser: { type: Number },
+})
+
+module.exports = mongoose.model('Coupon', couponSchema)

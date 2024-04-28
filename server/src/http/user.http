@@ -1,0 +1,87 @@
+@server = http://localhost:3002
+@endPoint = api/users
+@userId = 662d9c294ae457ec0f48bdb2
+
+### POST /
+POST {{ server }}/{{ endPoint }} HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Fake name",
+  "email": "fakeemail@email.com",
+  "mobile": "119997899999",
+  "password": "fakepass",
+  "address": {
+    "street": "Fake street",
+    "neighborhood": "Fake Neighborhood",
+    "city": "Fake City",
+    "state": "Fake State",
+    "number": "12",
+    "zipCode": 123465789
+  }
+}
+
+### POST /login
+POST {{ server }}/{{ endPoint }}/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "fakeemail@email.com",
+  "password": "fakepass"
+}
+
+### GET /refresh-token
+GET {{ server }}/{{ endPoint }}/refresh-token HTTP/1.1
+
+### GET /logout
+GET {{ server }}/{{ endPoint }}/logout HTTP/1.1
+
+### PUT /:id
+PUT {{ server }}/{{ endPoint }}/{{ userId }} HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Fake name",
+  "mobile": "11999899999"
+}
+
+### PUT /:id/update-password
+PUT {{ server }}/{{ endPoint }}/{{ userId }}/update-password HTTP/1.1
+Content-Type: application/json
+
+{
+  "password": "fakepass",
+  "newPassword": "fakepass"
+}
+
+### POST /forgot-password-token
+POST {{ server }}/{{ endPoint }}/forgot-password-token HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "fakeemail@email.com"
+}
+
+### POST /reset-password
+POST {{ server }}/{{ endPoint }}/reset-password HTTP/1.1
+Content-Type: application/json
+
+{
+  "token": "e3ac4de1b2391b8a72eaa7c918abbd697492c53614e20aaadad7463065efa7c6",
+  "password": "newfake"
+}
+
+### GET /:id
+GET {{ server }}/{{ endPoint }}/{{ userId }} HTTP/1.1
+
+### GET /
+GET {{ server }}/{{ endPoint }} HTTP/1.1
+
+### DELETE /:id
+DELETE {{ server }}/{{ endPoint }}/{{ userId }} HTTP/1.1
+
+### DELETE /:id/block
+DELETE {{ server }}/{{ endPoint }}/{{ userId }}/block HTTP/1.1
+
+### PUT /:id/unblock
+PUT {{ server }}/{{ endPoint }}/{{ userId }}/unblock HTTP/1.1
