@@ -13,6 +13,7 @@ import CatalogCategories from './pages/catalog/categories'
 import CatalogColors from './pages/catalog/colors'
 import Orders from './pages/orders'
 import Coupons from './pages/coupons'
+import Blogs from './pages/blog/blogs'
 
 export default function App() {
   return (
@@ -31,6 +32,7 @@ export default function App() {
           <Route path="cores" element={<CatalogColors />} />
           <Route path="pedidos" element={<Orders />} />
           <Route path="cupons" element={<Coupons />} />
+          <Route path="blogs" element={<Blogs />} />
         </Route>
       </Routes>
     </Router>
