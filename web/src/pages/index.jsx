@@ -8,3 +8,4 @@ export { default as Editor } from './editor'
 export { default as ColorPicker } from './color-picker'
 
 export { default as Line } from './charts/line'
+export { default as Area } from './charts/area'
