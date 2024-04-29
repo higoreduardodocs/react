@@ -11,6 +11,7 @@ import {
   ColorPicker,
   Line,
   Area,
+  Bar,
 } from './pages'
 import { useStateContext } from './contexts/context'
 import { ConfigButton } from './components'
@@ -57,6 +58,7 @@ export default function App() {
               <Route path="/color-picker" element={<ColorPicker />} />
               <Route path="/line" element={<Line />} />
               <Route path="/area" element={<Area />} />
+              <Route path="/bar" element={<Bar />} />
             </Routes>
 
             {/* FOOTER */}
