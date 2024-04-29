@@ -6,3 +6,5 @@ export { default as Calendar } from './calendar'
 export { default as Kanban } from './kanban'
 export { default as Editor } from './editor'
 export { default as ColorPicker } from './color-picker'
+
+export { default as Line } from './charts/line'

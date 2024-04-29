@@ -9,6 +9,7 @@ import {
   Kanban,
   Editor,
   ColorPicker,
+  Line,
 } from './pages'
 import { useStateContext } from './contexts/context'
 import { ConfigButton } from './components'
@@ -53,6 +54,7 @@ export default function App() {
               <Route path="/kanban" element={<Kanban />} />
               <Route path="/editor" element={<Editor />} />
               <Route path="/color-picker" element={<ColorPicker />} />
+              <Route path="/line" element={<Line />} />
             </Routes>
 
             {/* FOOTER */}
