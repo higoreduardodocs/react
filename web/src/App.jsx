@@ -7,6 +7,7 @@ import {
   Customers,
   Calendar,
   Kanban,
+  Editor,
 } from './pages'
 import { useStateContext } from './contexts/context'
 import { ConfigButton } from './components'
@@ -49,6 +50,7 @@ export default function App() {
               <Route path="/customers" element={<Customers />} />
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/kanban" element={<Kanban />} />
+              <Route path="/editor" element={<Editor />} />
             </Routes>
 
             {/* FOOTER */}
