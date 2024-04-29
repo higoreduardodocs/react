@@ -9,6 +9,7 @@ import Checkout from './pages/checkout'
 import Compare from './pages/compare'
 import SignIn from './pages/sign-in'
 import SignUp from './pages/sign-up'
+import Wishlist from './pages/wishlist'
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/comparar" element={<Compare />} />
           <Route path="/login" element={<SignIn />} />
           <Route path="/criar-conta" element={<SignUp />} />
+          <Route path="/favoritos" element={<Wishlist />} />
         </Route>
       </Routes>
     </Router>
