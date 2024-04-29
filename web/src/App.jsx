@@ -15,6 +15,7 @@ import {
   Pie,
   Financial,
   ColorMapping,
+  Pyramid,
 } from './pages'
 import { useStateContext } from './contexts/context'
 import { ConfigButton } from './components'
@@ -65,6 +66,7 @@ export default function App() {
               <Route path="/pie" element={<Pie />} />
               <Route path="/financial" element={<Financial />} />
               <Route path="/color-mapping" element={<ColorMapping />} />
+              <Route path="/pyramid" element={<Pyramid />} />
             </Routes>
 
             {/* FOOTER */}
