@@ -12,6 +12,7 @@ import {
   Line,
   Area,
   Bar,
+  Pie,
 } from './pages'
 import { useStateContext } from './contexts/context'
 import { ConfigButton } from './components'
@@ -59,6 +60,7 @@ export default function App() {
               <Route path="/line" element={<Line />} />
               <Route path="/area" element={<Area />} />
               <Route path="/bar" element={<Bar />} />
+              <Route path="/pie" element={<Pie />} />
             </Routes>
 
             {/* FOOTER */}
