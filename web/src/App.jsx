@@ -12,6 +12,7 @@ import SignUp from './pages/sign-up'
 import Wishlist from './pages/wishlist'
 import Blogs from './pages/blogs'
 import Blog from './pages/blog'
+import ForgotPassword from './pages/forgot-password'
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/favoritos" element={<Wishlist />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blogs/:slug" element={<Blog />} />
+          <Route path="/recuperar-senha" element={<ForgotPassword />} />
         </Route>
       </Routes>
     </Router>
