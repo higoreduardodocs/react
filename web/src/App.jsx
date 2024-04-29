@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-import { Ecommerce, Orders } from './pages'
+import { Ecommerce, Orders, Employees } from './pages'
 import { useStateContext } from './contexts/context'
 import { ConfigButton } from './components'
 import { Sidebar, Navbar, ThemeSettings, Footer } from './widgets'
@@ -38,6 +38,7 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Ecommerce />} />
               <Route path="/orders" element={<Orders />} />
+              <Route path="/employees" element={<Employees />} />
             </Routes>
 
             {/* FOOTER */}
