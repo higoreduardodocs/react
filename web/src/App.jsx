@@ -14,6 +14,7 @@ import Blogs from './pages/blogs'
 import Blog from './pages/blog'
 import ForgotPassword from './pages/forgot-password'
 import ResetPassword from './pages/reset-password'
+import Contact from './pages/contact'
 
 export default function App() {
   return (
@@ -33,6 +34,7 @@ export default function App() {
           <Route path="/blogs/:slug" element={<Blog />} />
           <Route path="/recuperar-senha" element={<ForgotPassword />} />
           <Route path="/redefinir-senha" element={<ResetPassword />} />
+          <Route path="/contato" element={<Contact />} />
         </Route>
       </Routes>
     </Router>
