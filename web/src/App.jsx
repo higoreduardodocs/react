@@ -10,6 +10,8 @@ import Compare from './pages/compare'
 import SignIn from './pages/sign-in'
 import SignUp from './pages/sign-up'
 import Wishlist from './pages/wishlist'
+import Blogs from './pages/blogs'
+import Blog from './pages/blog'
 
 export default function App() {
   return (
@@ -25,6 +27,8 @@ export default function App() {
           <Route path="/login" element={<SignIn />} />
           <Route path="/criar-conta" element={<SignUp />} />
           <Route path="/favoritos" element={<Wishlist />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/:slug" element={<Blog />} />
         </Route>
       </Routes>
     </Router>
