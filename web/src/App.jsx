@@ -14,6 +14,7 @@ import {
   Bar,
   Pie,
   Financial,
+  ColorMapping,
 } from './pages'
 import { useStateContext } from './contexts/context'
 import { ConfigButton } from './components'
@@ -63,6 +64,7 @@ export default function App() {
               <Route path="/bar" element={<Bar />} />
               <Route path="/pie" element={<Pie />} />
               <Route path="/financial" element={<Financial />} />
+              <Route path="/color-mapping" element={<ColorMapping />} />
             </Routes>
 
             {/* FOOTER */}
