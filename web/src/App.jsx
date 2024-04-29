@@ -7,6 +7,7 @@ import Product from './pages/product'
 import Cart from './pages/cart'
 import Checkout from './pages/checkout'
 import Compare from './pages/compare'
+import SignIn from './pages/sign-in'
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/carrinho" element={<Cart />} />
           <Route path="/finalizar-compra" element={<Checkout />} />
           <Route path="/comparar" element={<Compare />} />
+          <Route path="/login" element={<SignIn />} />
         </Route>
       </Routes>
     </Router>
