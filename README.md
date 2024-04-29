@@ -10,6 +10,7 @@ Applications developed in React and other auxiliary technologies
 > Client App:
 
 - Movielia: [client-app/movielia](https://github.com/higoreduardodocs/react/tree/client-app/movielia)
+- Sync dashboard: [client-app/sync-dashboard](https://github.com/higoreduardodocs/react/tree/client-app/sync-dashboard)
 - Threejs portfolio: [client-app/threejs-portfolio](https://github.com/higoreduardodocs/react/tree/client-app/threejs-portfolio)
 
 > Clone App:
